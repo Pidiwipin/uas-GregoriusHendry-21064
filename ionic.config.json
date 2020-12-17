@@ -1,0 +1,7 @@
+{
+  "name": "Chandra_00000021110_IF733_CL_UAS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

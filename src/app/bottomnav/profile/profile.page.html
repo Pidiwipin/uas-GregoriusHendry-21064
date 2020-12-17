@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="black">
+    <ion-title>Profile</ion-title>
+    <ion-button style="padding-right:10px;" color="dark" slot="end" (click)="logout()"
+      ><ion-icon name="log-out-outline"></ion-icon
+    ></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <div class="ion-text-center ion-margin-bottom">
+      <ion-card-header>
+        <ion-img src="https://64.media.tumblr.com/5b64ae9a0902868baf821dd8119fa8a7/5269465df4c351f0-f1/s1280x1920/45271b01d42ca4f5a8c0200f80ce4fa6cbf4a287.jpg"></ion-img>
+        <ion-card-title>{{username}}</ion-card-title>
+        <ion-card-subtitle>00000021064</ion-card-subtitle>
+      </ion-card-header>
+    </div>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngIf="userCheckins.length == 0">
+            <ion-label>No check in found.</ion-label>
+          </ion-item>
+          <ion-item
+            *ngFor="let userCheckin of userCheckins.reverse(); let i = index"
+          >
+            <ion-label class="ion-text-wrap"
+              >{{username}} {{userCheckin[0]}}<br />
+              <small>{{userCheckin[1] | date :'short'}}</small>
+            </ion-label>
+            <ion-button
+              color="danger"
+              slot="end"
+              (click)="removeCheckin(userCheckins.length - i - 1)"
+            >
+              <ion-icon name="close"></ion-icon>
+            </ion-button>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
