@@ -1,3 +1,4 @@
-Chandra 21110
-Hosting: https://uas-chandra-21110.vercel.app/
-Github: https://github.com/Chandra179/mobileLAB/tree/master/Chandra_00000021110_IF733_CL_UAS
+Nama: Gregorius Hendry
+NIM: 00000021064
+Hosting: https://uas-gregorius-hendry-21064.vercel.app/login
+Github: https://github.com/Pidiwipin/uas-GregoriusHendry-21064/tree/main
